@@ -49,7 +49,7 @@ public class Problem8 {
             .max());
         */
 
-        // Aqui eu faço isso tudo de uma vez, um ponto que não me agrada é o fato de ter que converter a string em array de inteiros 2 vezes uma apenas para pegar o lan
+        // Aqui eu faço isso tudo de uma vez, um pornto de fraqueza é que a cada indice eu processo novamente os 1000 digitos 
         long startTime = System.nanoTime();
 
         int value = IntStream.range(0,
