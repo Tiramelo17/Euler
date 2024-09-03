@@ -49,18 +49,14 @@ public class Problem8 {
             .max());
         */
 
-        // Aqui eu faço isso tudo de uma vez, um ponto que não me agrada é o fato de ter que converter a string em array de inteiros 2 vezes 
+        // Aqui eu faço isso tudo de uma vez, um ponto que não me agrada é o fato de ter que converter a string em array de inteiros 2 vezes uma apenas para pegar o lan
         long startTime = System.nanoTime();
 
         int value = IntStream.range(0,
-                        number.chars()
-                        .filter(Character::isDigit)
-                        .map(Character::getNumericValue)
-                        .toArray().length - 12)
+                        1000 - 12)
             .mapToObj(i -> Arrays.stream(number.chars()
-            .filter(Character::isDigit)
-            .map(Character::getNumericValue)
-            .toArray(), i, i + 13))
+                .map(Character::getNumericValue)
+                .toArray(), i, i + 13))
             .collect(Collectors.toList())
             .stream()
             .mapToInt(stream -> stream.reduce(1,(x, y) -> x * y))
