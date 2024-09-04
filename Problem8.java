@@ -32,7 +32,6 @@ public class Problem8 {
        /*         
       // Primeiro quebrei a string de 1000 digitos em 1 array de inteiros com cada um deles
       int[] digits = number.chars()
-        .filter(Character::isDigit)
         .map(Character::getNumericValue)
         .toArray();
       
